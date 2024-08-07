@@ -1,0 +1,18 @@
+<h1>List Of Articles</h1>
+
+<ul>
+  <% @articles.each do |article| %>
+    <% unless article.archived? %>
+      <li>
+        <%= link_to article.title, article %>
+      </li>
+    <% end %>
+  <% end %>
+</ul>
+<div>
+  <%= link_to "New Article", new_article_path %>
+</div>
+
+<div>
+  <%= link_to "Sign Up", new_user_registration_path %>
+</div>

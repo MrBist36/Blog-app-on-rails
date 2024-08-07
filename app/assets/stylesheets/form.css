@@ -1,0 +1,59 @@
+/* General form styling */
+form {
+  background: #f5f5f5;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Styling for form labels */
+form label {
+  display: block;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+/* Centering and styling for input fields */
+form input[type="text"],
+form textarea {
+  width: 80%;
+  max-width: 500px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Styling for error messages */
+form div {
+  color: #e74c3c;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+/* Styling for submit button */
+form input[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+/* Change the background color of the submit button on hover */
+form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
