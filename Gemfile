@@ -58,4 +58,4 @@ end
 
 gem "devise", "~> 4.9"
 
-gem "redis", "~> 4.2"
+gem "redis", "~> 5.2"
