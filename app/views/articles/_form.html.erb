@@ -1,4 +1,5 @@
 <div>
+<%= current_user.organization_id %>
 <%= form_with model: article do |form| %>
   <div>
     <%= form.label :title %><br>
@@ -7,6 +8,9 @@
       <div><%= message %></div>
     <% end %>
   </div>
+    
+  <%= form.number_field :user_id, id: 'article.user_id', class:"form-control", placeholder:"User Id", value: current_user.id, type: :hidden%><br/>
+  <%= form.number_field :organization_id, id: 'article.organization_id', class:"form-control", placeholder:"Organization Id", value: @organization_id, type: :hidden %><br/>
 
   <div>
     <%= form.label :body %><br>
