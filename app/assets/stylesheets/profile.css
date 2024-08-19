@@ -1,0 +1,101 @@
+/* General Styling */
+.profile {
+  max-width: 90%;
+  margin: 20px auto;
+  padding: 25px;
+  background: #e9ecef; /* Light gray background for the form container */
+  border: 1px solid #d3d3d3; /* Slightly darker border */
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.profile h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333; /* Dark gray color */
+  font-family: 'Arial', sans-serif;
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: center; /* Center align label and input */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1em;
+  font-weight: 500;
+  color: #555; /* Medium gray color */
+}
+
+.form-control, .form-control-file {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 1em;
+  text-align: center; /* Center align text */
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-control:focus, .form-control-file:focus {
+  border-color: #6c757d; /* Gray border on focus */
+  box-shadow: 0 0 8px rgba(108, 117, 125, 0.3);
+  outline: none;
+}
+
+.form-control::placeholder, .form-control-file::placeholder {
+  color: #aaa; /* Light gray placeholder text */
+}
+
+.btn-primary {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #6c757d; /* Gray background */
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  text-align: center; /* Center align text in button */
+}
+
+.btn-primary:hover {
+  background-color: #5a6268; /* Darker gray on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary:focus {
+  outline: none;
+}
+
+/* File Input Styling */
+.form-group input[type="file"] {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  font-size: 0.9em;
+  background: #f8f9fa; /* Light background for the file input */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile {
+    padding: 15px;
+  }
+
+  .profile h1 {
+    font-size: 1.5em;
+  }
+}

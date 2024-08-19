@@ -1,0 +1,26 @@
+<h1>Profile Details</h1>
+
+<p>
+  <strong>FullName:</strong>
+  <%= @profile.full_name %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @profile.gender %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @profile.address %>
+</p>
+
+<p>
+  <strong>Date of Birth:</strong>
+  <%= @profile.date_of_birth %>
+</p>
+
+<div>
+  <%= link_to "Back to Home", root_path %>
+  <%= link_to "Edit Profile", edit_profile_path(@profile), class: "btn btn-secondary" %>
+</div>

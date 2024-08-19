@@ -26,3 +26,9 @@ Things you may want to cover:
 
 
   # ArticleApp-onRails
+
+
+<!-- <div class="form-group">
+    <%= form.label :profile_picture, "Profile Picture" %>
+    <%= form.file_field :profile_picture, class: "form-control" %>
+  </div> -->

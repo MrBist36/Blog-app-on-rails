@@ -38,14 +38,6 @@ ul li {
   display: inline-block;
 }
 
-ul li a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-ul li a:hover {
-  color: #0056b3;
-}
 
 /* Styling for section headers */
 h2 {

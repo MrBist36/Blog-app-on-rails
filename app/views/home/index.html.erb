@@ -1,31 +1,61 @@
-<h1> Hello I am a blog app <h1>
-<% if user_signed_in? %>
-  <div>
-    <%= link_to "New Article", new_article_path %>
-  </div>
 
-  <div>
-    <%= link_to "My Article", articles_path %>
-  </div>
+<html>
+  <head>
+    <title>FleetPanda</title>
+    <link rel="stylesheet" href="style/style.css">
+  </head>
 
-  <div>
-    <%= link_to "All Article", org_articles_path %>
-  </div>
-<% end %>
+  <body>
+    <nav>
+            <h1>FleetPanda Service.Inc</h1>
+        </div>
+    </nav>
 
-<% unless user_signed_in? %>
-  <div>
-    <%= link_to "Sign Up", new_user_registration_path %>
-  </div>
-<% end %>
+    <% if user_signed_in? %>
 
-<div>
-  <% if user_signed_in? %>
-    <div>Welcome <%= current_user.email %></div>
-    <%= button_to "Log Out", destroy_user_session_path, method: :delete %>
-  <% else %>
-    <%= link_to "Login", new_user_session_path %>
-  <% end %>
-</div>
+      <div>
+        <%= link_to "Add Profile", new_profile_path %>
+      </div>
+
+      <div>
+        <%= link_to "My Article", articles_path %>
+      </div>
+
+      <div>
+        <%= link_to "All Article", org_articles_path %>
+      </div>
+
+      <div>
+        <%= link_to "Add New Article", new_article_path %>
+      </div>
+
+      <div>
+        <%= link_to "Show my Profile", profile_path %>
+      </div>
+    <% end %>
+
+    <% unless user_signed_in? %>
+      <div>
+        <%= link_to "Sign Up", new_user_registration_path %>
+      </div>
+    <% end %>
+
+    <div>
+    <% if user_signed_in? %>
+      <div>Welcome <%= current_user.email %></div>
+      <%= button_to "Log Out", destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to "Login", new_user_session_path %>
+    <% end %>
+    </div>
+ 
+    <footer>
+        <p>This website is only for information purpose. Copyright @FleetPanda Nepal</p>
+    </footer>
+  </body>
+
+</html>
+
+
 
 

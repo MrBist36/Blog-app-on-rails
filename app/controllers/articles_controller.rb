@@ -44,11 +44,6 @@ class ArticlesController < ApplicationController
 
   def update
     @article = Article.find(params[:id])
- 
-    unless current_user[:id]== @article[:user_id]
-      return
-    end
-
     if @article.update(article_params)
       redirect_to @article
     else

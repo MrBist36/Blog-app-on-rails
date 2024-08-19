@@ -1,9 +1,7 @@
 <h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-
+<%= form_for(resource_name, url: session_path(resource_name)) do |f| %>
   <div>
-    <%= select_tag :organization_id, options_for_select(Organization.all.collect{ |o| [o.name, o.id] }), include_blank: true %>
+    <%= select_tag :organization_id, options_for_select(Organization.all.collect{ |o| [o.name, o.id] }), prompt: "Select Organization" %>
   </div>
 
 
