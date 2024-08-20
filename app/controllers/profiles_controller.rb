@@ -11,7 +11,7 @@ class ProfilesController < ApplicationController
     @organization = Organization.find_by(id: @organization_id)
     @profile = @organization.users.find_by(id:current_user.id).build_profile(profile_params)
     if @profile.save
-      redirect_to profile_path, notice: 'Profile was successfully created.'
+      redirect_to profiles_path, notice: 'Profile was successfully created.'
     else
       render :new
     end
@@ -26,13 +26,13 @@ class ProfilesController < ApplicationController
   def edit
     @organization_id = Membership.find_by(user_id: current_user.id).organization_id
     @organization = Organization.find_by(id: @organization_id)
-    @profile = Profile.find(params[:format])
+    @profile = Profile.find(params[:id])
   end
   
   def update
-    @profile = Profile.find(params[:format])
+    @profile = Profile.find(params[:id])
     if @profile.update(profile_params)
-      redirect_to @profile_path, notice: 'Profile was successfully updated.'
+      redirect_to profiles_path, notice: 'Profile was successfully updated.'
     else
       render :edit
     end
@@ -40,11 +40,11 @@ class ProfilesController < ApplicationController
 
   private
 
-  def set_profile
-    @profile = Profile.find(params[:id])
-  end
+  # def set_profile
+  #   @profile = Profile.find(params[:id])
+  # end
 
   def profile_params
-    params.require(:profile).permit(:full_name, :gender, :address, :date_of_birth,:user_id,:organization_id)
+    params.require(:profile).permit(:full_name, :gender, :address, :date_of_birth, :user_id, :organization_id)
   end
 end

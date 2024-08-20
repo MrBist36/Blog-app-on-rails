@@ -4,7 +4,8 @@ Rails.application.routes.draw do
     registrations: "users/registrations", 
     sessions: "users/sessions"
   }
-  resource :profile, only: [:new , :create, :show, :edit]
+  resources :profiles, only: [:new , :create, :show, :edit, :update]
+  # get 'profiles', to:"profiles#show"
   
   root "home#index"
 
