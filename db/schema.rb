@@ -30,6 +30,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_08_19_102732) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "status"
+    t.integer "user_id"
     t.index ["article_id"], name: "index_comments_on_article_id"
   end
 

@@ -1,7 +1,7 @@
 <%= profile.new_record? %>
 <div class ="profile">
 <%=form_with model: profile, url:profile.new_record? ? profiles_path : profile do |form| %>
-  
+
   <%= form.hidden_field :user_id, id:"user.id", value:current_user.id, class:"form-control" %>
   <%= form.hidden_field :organization_id, id:"organization.id", value:@organization_id, class:"form-control" %>
 

@@ -3,6 +3,8 @@ class Comment < ApplicationRecord
 
   belongs_to :article
   after_initialize :set_default_status, if: :new_record?
+
+  belongs_to :user
   
   private
   def set_default_status

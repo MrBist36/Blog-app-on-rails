@@ -59,3 +59,7 @@ end
 gem "devise", "~> 4.9"
 
 gem "redis", "~> 4.2"
+
+
+gem "graphql", "~> 2.3"
+gem "graphiql-rails", group: :development
