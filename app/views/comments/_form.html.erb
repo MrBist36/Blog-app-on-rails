@@ -1,4 +1,4 @@
-<div class = "comment"
+<div class = "comment">
 <%= form_with model: [ @article, @article.comments.build ] do |form| %>
   <p>
     <%= form.label :commenter %><br>
@@ -8,10 +8,11 @@
     <%= form.label :body %><br>
     <%= form.text_area :body %>
   </p>
+
   <%= form.number_field :user_id, id: 'article.user_id', class:"form-control", placeholder:"User Id", value: current_user.id, type: :hidden%><br/>
   <%= form.number_field :article_id, id: 'article.id', class:"form-control", placeholder:"Article Id", value: @article.id, type: :hidden %><br/>
   <p>
-    <%= form.submit %>
+    <%= form.submit  %>
   </p>
 <% end %>
 </div>

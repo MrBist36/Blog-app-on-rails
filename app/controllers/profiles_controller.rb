@@ -40,10 +40,6 @@ class ProfilesController < ApplicationController
 
   private
 
-  # def set_profile
-  #   @profile = Profile.find(params[:id])
-  # end
-
   def profile_params
     params.require(:profile).permit(:full_name, :gender, :address, :date_of_birth, :user_id, :organization_id)
   end

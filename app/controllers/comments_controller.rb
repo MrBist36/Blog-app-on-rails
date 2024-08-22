@@ -1,8 +1,7 @@
 class CommentsController < ApplicationController
   def new
-    debugger
     @article = Article.find(params[:article_id])
-    @comment = @article.comments.build
+    @comment = @article.comments.new
   end
   
   def create
@@ -29,6 +28,6 @@ class CommentsController < ApplicationController
 
   private
     def comment_params
-      params.require(:comment).permit(:commenter, :body, :status, :user_id)
+      params.require(:comment).permit(:commenter, :body, :status, :user_id, :article)
     end
 end
