@@ -39,10 +39,14 @@ class ArticlesController < ApplicationController
   end
 
   def edit
+    @organization_id = Membership.find_by(user_id: current_user.id).organization_id
+    @organization = Organization.find_by(id: @organization_id)
     @article = Article.find(params[:id])
   end
 
   def update
+    @organization_id = Membership.find_by(user_id: current_user.id).organization_id
+    @organization = Organization.find_by(id: @organization_id)
     @article = Article.find(params[:id])
     if @article.update(article_params)
       redirect_to @article
