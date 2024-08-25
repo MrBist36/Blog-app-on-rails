@@ -11,7 +11,6 @@ module Types
       field :remember_created_at, GraphQL::Types::ISO8601DateTime
       field :created_at, GraphQL::Types::ISO8601DateTime, null: false
       field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
-      field :organization_id, Integer, null: false
     end
   end
 end
